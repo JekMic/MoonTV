@@ -85,9 +85,18 @@
       "api": "https://zy.xmm.hk/api.php/provide/vod",
       "name": "小猫咪资源"
     },
-    "18": {
-      "api":" https://lbapi9.com/api.php/provide/vod/",
-       "name":  "18"
+    "18Av": {
+      "api": "https://lbapi9.com/api.php/provide/vod/",
+       "name":  "18AV"
+    },
+    "AIvin": {
+      "api": "http://lbapiby.com/api.php/provide/vod/",
+       "name":  "AIvin"
+    },
+    {
+    "91麻豆": {
+      "api": "https://91md.me/api.php/provide/vod/", 
+      "name": "91麻豆"
     }
   }
 }
