@@ -81,9 +81,82 @@
       "api": "https://cj.lziapi.com/api.php/provide/vod",
       "name": "量子资源站"
     },
+    "jszy": {
+      "api": "https://jszyapi.com/api.php/provide/vod",
+      "name": "极速资源"
+    },
+    "hongniu": {
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod",
+      "name": "红牛"
+    },
+    "91md": {
+      "api": "https://91md.me/api.php/provide/vod",
+      "name": "91麻豆"
+    },
+    "madou": {
+      "api": "https://madouse.la/api.php/provide/vod",
+      "name": "麻豆"
+    },
+    "lbzy": {
+      "api": "https://lbapi9.com/api.php/provide/vod",
+      "name": "乐播资源"
+    },
+    "danaizi": {
+      "api": "https://apidanaizi.com/api.php/provide/vod",
+      "name": "大奶子"
+    },
+    "xingba": {
+      "api": "xingba222.com/api.php/provide/vod",
+      "name": "杏吧"
+    },
+    "lsb": {
+      "api": "https://apilsbzy1.com/api.php/provide/vod",
+      "name": "老色逼"
+    },
     "xiaomaomi": {
       "api": "https://zy.xmm.hk/api.php/provide/vod",
       "name": "小猫咪资源"
+    },
+    "ckzy": {
+      "api": "https://www.ckzy1.com/api.php/provide/vod",
+      "name": "CK资源"
+    },
+    "jkun": {
+      "api": "https://jkunzyapi.com/api.php/provide/vod",
+      "name": "jkun资源"
+    },
+    "bwzy": {
+      "api": "https://api.bwzym3u8.com/api.php/provide/vod",
+      "name": "百万资源"
+    },
+    "souav": {
+      "api": "https://api.souavzy.vip/api.php/provide/vod",
+      "name": "souav资源"
+    },
+    "r155": {
+      "api": "https://155api.com/api.php/provide/vod",
+      "name": "155资源"
+    },
+    "huangcang": {
+      "api": "https://hsckzy888.com/api.php/provide/vod",
+      "name": "黄色仓库",
+      "detail": "https://hsckzy888.com"
+    },
+    "yutu": {
+      "api": "https://apiyutu.com/api.php/provide/vod",
+      "name": "玉兔资源"
+    },
+    "subo": {
+      "api": "https://subocaiji.com/api.php/provide/vod",
+      "name": "速播资源"
+    },
+    "fczy": {
+      "api": "https://api.fczy888.me/api.php/provide/vod",
+      "name": "蜂巢资源"
+    },
+    "ukzy": {
+      "api": "https://api.ukuapi88.com/api.php/provide/vod",
+      "name": "U酷资源"
     }
   }
 }
