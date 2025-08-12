@@ -47,6 +47,7 @@ export async function GET(request: NextRequest) {
           'Cache-Control': `public, max-age=${cacheTime}, s-maxage=${cacheTime}`,
           'CDN-Cache-Control': `public, s-maxage=${cacheTime}`,
           'Vercel-CDN-Cache-Control': `public, s-maxage=${cacheTime}`,
+          'Netlify-Vary': 'query',
         },
       }
     );
@@ -68,12 +69,12 @@ async function generateSuggestions(query: string): Promise<
   const config = await getConfig();
   const apiSites = config.SourceConfig.filter((site: any) => !site.disabled);
   let realKeywords: string[] = [];
-  
+
   if (apiSites.length > 0) {
     // 取第一个可用的数据源进行搜索
     const firstSite = apiSites[0];
     const results = await searchFromApi(firstSite, query);
-    
+
     realKeywords = Array.from(
       new Set(
         results
@@ -91,17 +92,20 @@ async function generateSuggestions(query: string): Promise<
   const realSuggestions = realKeywords.map((word) => {
     const wordLower = word.toLowerCase();
     const queryWords = queryLower.split(/[ -:：·、-]/);
-    
+
     // 计算匹配分数：完全匹配得分更高
     let score = 1.0;
     if (wordLower === queryLower) {
       score = 2.0; // 完全匹配
-    } else if (wordLower.startsWith(queryLower) || wordLower.endsWith(queryLower)) {
+    } else if (
+      wordLower.startsWith(queryLower) ||
+      wordLower.endsWith(queryLower)
+    ) {
       score = 1.8; // 前缀或后缀匹配
-    } else if (queryWords.some(qw => wordLower.includes(qw))) {
+    } else if (queryWords.some((qw) => wordLower.includes(qw))) {
       score = 1.5; // 包含查询词
     }
-    
+
     // 根据匹配程度确定类型
     let type: 'exact' | 'related' | 'suggestion' = 'related';
     if (score >= 2.0) {
@@ -111,7 +115,7 @@ async function generateSuggestions(query: string): Promise<
     } else {
       type = 'suggestion';
     }
-    
+
     return {
       text: word,
       type,

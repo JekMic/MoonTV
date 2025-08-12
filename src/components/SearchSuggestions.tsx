@@ -44,9 +44,6 @@ export default function SearchSuggestions({
         `/api/search/suggestions?q=${encodeURIComponent(searchQuery)}`,
         {
           signal: controller.signal,
-          headers: {
-            'Netlify-Vary': 'query',
-          },
         }
       );
       if (response.ok) {
