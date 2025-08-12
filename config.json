@@ -106,7 +106,7 @@
       "name": "大奶子"
     },
     "xingba": {
-      "api": "xingba222.com/api.php/provide/vod",
+      "api": "https://xingba222.com/api.php/provide/vod",
       "name": "杏吧"
     },
     "lsb": {
